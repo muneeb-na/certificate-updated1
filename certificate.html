@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate.io</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 70px; /* Prevent content from hiding behind the fixed navbar */
+            background-color: #f4f4f4;
+        }
+
+        /* Top Bar */
+        #top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        #top h1 {
+            font-size: 22px;
+            white-space: nowrap;
+        }
+
+        #top input {
+            flex: 1;
+            max-width: 300px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        #top a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #0056b3;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        #top a:hover {
+            background-color: #003d82;
+        }
+
+        /* Skill Section */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .skill-card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .skill-card button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .skill-card button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            #top {
+                flex-direction: column;
+                padding: 15px;
+                gap: 10px;
+                text-align: center;
+            }
+
+            #top input {
+                width: 100%;
+            }
+        }
+        .sskill-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            margin: 10px;
+            text-align: center;
+        }
+        .sskill-card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: red;
+        }
+
+        .sskill-card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .sskill-card button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #heading {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #heading {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    #heading {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+}
+/* Ensure the page takes up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content should expand to push footer down */
+.main-content {
+    flex: 1;
+}
+
+/* Footer stays at the bottom */
+footer {
+    background-color: #222;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    bottom: 0%;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-content a:hover {
+    color: #f39c12;
+}
+
+
+/* Responsive Footer */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="top">
+        <h1>CERTIFICATE.IO</h1>
+        <input type="search" placeholder="Search for skill name...">
+        <a href="your-certificate.html">Your Certificates</a>
+    </div>
+<h1 id="heading">web development section</h1>
+    <div class="skills-container">
+        <!-- Skill 1 -->
+        <div class="skill-card">
+            <h2>HTML</h2>
+            <p>compleate HTML</p>
+            <button>Start Test</button>
+        </div>
+        <div class="skill-card">
+            <h2>CSS</h2>
+            <p>Compleate CSS</p>
+            <button>Start Test</button>
+        </div>
+        <div class="skill-card">
+            <h2>JavaScript basics</h2>
+            <p>just some basics of JavaScript.</p>
+            <button>Start Test</button>
+        </div>
+        <div class="skill-card">
+            <h2>JavaScript intermediate</h2>
+            <p>Master JavaScript and build interactive web applications.</p>
+            <button>Start Test</button>
+        </div>
+        <div class="skill-card">
+            <h2>JavaScript  <strong>MASTER</strong> </h2>
+            <p>Master JavaScript and build interactive web applications.</p>
+            <button>Start Test</button>
+        </div>
+        <div class="skill-card">
+            <h2>tailwind css</h2>
+            <p>tailwind CSS knowldge.</p>
+            <button>Start Test</button>
+        </div>
+        <div class="skill-card">
+            <h2>BootStrap</h2>
+            <p>you need some knowldge of BootStrap</p>
+            <button>Start Test</button>
+        </div>
+        <div class="sskill-card special">
+            <span class="hot-tag">HOT 🔥</span>
+            <h2>BACKEND WEB DEVELOPMENT</h2>
+            <p>Everything about BACKEND web.</p>
+            <button>Start Test</button>
+        </div>        
+        <div class="skill-card">
+            <h2>Database</h2>
+            <p>how to connect server to BACKEND.</p>
+            <button>Start Test</button>
+        </div>
+        <div class="sskill-card">
+            <span class="hot-tag">HOT 🔥</span>
+            <h2>FULL STACK WEB DEVELOPMENT</h2>
+            <p>Each and everything about web development.</p>
+            <button>Start Test</button>
+        </div>
+        <div class="sskill-card">
+            <span class="hot-tag">HOT 🔥</span>
+            <h2>FRONT END WEB DEVELOPMENT</h2>
+            <p>Master JavaScript and build interactive web applications.</p>
+            <button>Start Test</button>
+        </div>
+    </div>
+<h1 id="heading">Andriod development</h1>
+<div class="skills-container">
+    <div class="skill-card">
+        <h2>Kotlin (Recommended)</h2>
+        <p>Master in Kotlin.</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>Java</h2>
+        <p>How to migrate Java code to Kotlin?</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>Dart (with Flutter)</h2>
+        <p>How to use Firebase with Flutter?</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>JavaScript (with React Native)</h2>
+        <p>Master JavaScript and build interactive web applications.</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>C# (with Xamarin/.NET MAUI)</h2>
+        <p>How to integrate Xamarin with a backend API?</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>Python (with Kivy or BeeWare)</h2>
+        <p>How to build a GUI with Python and Kivy?</p>
+        <button>Start Test</button>
+    </div>
+</div>
+<h1 id="heading">High-Level Languages</h1>
+<div  class="skills-container">
+    <div class="skill-card">
+        <h2>Python</h2>
+        <p>Master Python and build interactive web applications.</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>Java</h2>
+        <p>Master Java and build interactive web applications.</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>C++</h2>
+        <p>Master C++ and build interactive web applications.</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>C#</h2>
+        <p>Master C# and build interactive web applications.</p>
+        <button>Start Test</button>
+</div>
+<div class="skill-card">
+    <h2>Swift </h2>
+    <p>how to create IOS apps.</p>
+    <button>Start Test</button>
+</div>
+<div class="skill-card">
+    <h2>C</h2>
+    <p>everything about C.</p>
+    <button>Start Test</button>
+</div>
+<h1 id="heading">Database Query Languages</h1>
+<div class="skills-container">
+    <div class="skill-card">
+        <h2>SQL</h2>
+        <p>Master SQL and build interactive web applications.</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>NoSQL</h2>
+        <p>Master NoSQL and build interactive web applications.</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>MongoDB</h2>
+        <p>Master MongoDB and build interactive web applications.</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>Firebase</h2>
+        <p>Master Firebase and build interactive web applications.</p>
+        <button>Start Test</button>
+    </div>
+</div>
+<h2 id="heading">IT Infrastructure & Support</h2>
+<div class="skills-container">
+    <div class="sskill-card">
+        <span>hot🔥</span>
+        <h2>IT support profecnlist</h2>
+        <p>Master Firebase and build interactive web applications.</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>NETWORKING ENG.</h2>
+        <p>Master Firebase and build interactive web applications.</p>
+        <button>Start Test</button>
+    </div>
+    <div class="skill-card">
+        <h2>SERVER ADMIN</h2>
+        <p>Master Firebase and build interactive web applications.</p>
+        <button>Start Test</button>
+</div>
+<footer>
+    <div class="footer-content">
+        <a href="#">Mail us</a>
+        <a href="https://muneebdev.vercel.app/" target="blank" lang="ease-in-out">About developer</a>
+    </div>
+</footer>
+</body>
+</html>

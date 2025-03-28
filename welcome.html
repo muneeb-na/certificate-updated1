@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome-certificate.io</title>
+    <style>
+        body {
+            background-image: url('bg.jpg'); /* Add your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        /* Hide scrollbar for Chrome, Safari, and Edge */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+body {
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for Internet Explorer & Edge */
+body {
+    -ms-overflow-style: none;
+}
+.my-div {
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.my-div::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+        a {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 600px;
+           animation:  slideBottomToUp 1s ease-out;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        h1{
+            text-align: center;
+            margin-left: 600px;
+            animation: slideUpToDown 1s ease-out;
+        }
+        h2{
+            margin-left: 600px;
+            animation: slideRightToLeft 1s ease-out;
+        }
+        @keyframes slideRightToLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUpToDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottomToUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-up {
+    animation: slideBottomToUp 1s ease-out;
+}
+
+
+.animate-slide-down {
+    animation: slideUpToDown 1s ease-out;
+}
+
+
+.animate-slide {
+    animation: slideRightToLeft 1s ease-out;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to Certificate.io</h1>
+    <h2>This is 100% free service</h2>
+    <a href="certificate.html">Get started</a>
+</body>
+</html>
