@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Search Results</h1>
+    <div id="results"></div>
+    <a href="index.html">Go back</a>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        const searchQuery = getQueryParam('q');
+        const resultsContainer = document.getElementById('results');
+
+        // Available test cards
+        const testCards = {
+            "css": `<div class="card"><h3>CSS Take Test</h3><p>Assess your CSS skills now!</p></div>`,
+            "html": `<div class="card"><h3>HTML Take Test</h3><p>Assess your HTML skills now!</p></div>`,
+            "javascript": `<div class="card"><h3>JavaScript Take Test</h3><p>Assess your JavaScript skills now!</p></div>`
+        };
+
+        if (searchQuery && testCards[searchQuery]) {
+            resultsContainer.innerHTML = testCards[searchQuery];
+        } else {
+            resultsContainer.innerHTML = "<p>No results found.</p>";
+        }
+    </script>
+
+</body>
+</html>

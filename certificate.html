@@ -220,10 +220,11 @@ footer {
     </style>
 </head>
 <body>
+    <div id="main-content">
 
     <div id="top">
         <h1>CERTIFICATE.IO</h1>
-        <input type="search" placeholder="Search for skill name...">
+        <input type="text" id="searchInput" placeholder="Search here...">
         <a href="your-certificate.html">Your Certificates</a>
     </div>
 <h1 id="heading">web development section</h1>
@@ -398,7 +399,70 @@ footer {
     <div class="footer-content">
         <a href="#">Mail us</a>
         <a href="https://muneebdev.vercel.app/" target="blank" lang="ease-in-out">About developer</a>
+        <a href="#">suggest a test</a>
     </div>
+</div>
 </footer>
 </body>
+<script>
+document.getElementById('searchInput').addEventListener('input', function() {
+    let query = this.value.toLowerCase();
+    let allCards = document.querySelectorAll('.skill-card, .sskill-card');
+    let headings = document.querySelectorAll('#heading');
+    let footer = document.querySelector('footer');
+
+    let anyVisible = false; // Flag to check if any result is found
+
+    allCards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        if (text.includes(query)) {
+            card.style.display = 'block';
+            anyVisible = true; // At least one result is found
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    // Show/hide headings and footer based on search results
+    if (query.trim() === '') {
+        headings.forEach(heading => heading.style.display = 'block');
+        footer.style.display = 'block';
+    } else {
+        headings.forEach(heading => heading.style.display = 'none');
+        footer.style.display = 'none';
+    }
+
+    // If no result is found, show a "No results found" message
+    let noResultsMessage = document.getElementById('no-results');
+    if (!anyVisible) {
+        if (!noResultsMessage) {
+            noResultsMessage = document.createElement('p');
+            noResultsMessage.id = 'no-results';
+            noResultsMessage.innerText = 'No results found';
+            noResultsMessage.style.textAlign = 'center';
+            noResultsMessage.style.fontSize = '18px';
+            document.body.appendChild(noResultsMessage);
+        }
+        noResultsMessage.style.display = 'block';
+    } else {
+        if (noResultsMessage) {
+            noResultsMessage.style.display = 'none';
+        }
+    }
+});
+// Count the number of test options
+const testButtons = document.querySelectorAll(".skill-card button, .sskill-card button");
+console.log("Total Test Options:", testButtons.length);
+
+// Add click event to store the test number in local storage
+testButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+        localStorage.setItem("selectedTest", index + 1);
+        console.log(`Test ${index + 1} stored in local storage`);
+    });
+});
+
+
+
+</script>
 </html>

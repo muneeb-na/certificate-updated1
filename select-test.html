@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Selection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+        .test-option {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        .test-option:hover {
+            transform: scale(1.05);
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .paid {
+            background-color: #ff9800;
+            color: white;
+            position: relative;
+        }
+        .paid::after {
+            content: "Coming Soon";
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: red;
+            color: white;
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+        .free {
+            background-color: #4caf50;
+            color: white;
+        }
+        .free:hover {
+            background-color: #45a049;
+        }
+        .test-description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .compare {
+            background-color: #2196F3;
+            color: white;
+        }
+        .compare:hover {
+            background-color: #1976D2;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select Your Test</h2>
+        <div class="test-option">
+            <h3>Paid Test</h3>
+            <ul>
+                <li>A proper interview held through Google Meet.</li>
+                <li>Interviewer will check your proficiency by giving tasks.</li>
+                <li>You can select the test time.</li>
+            </ul>
+            <button class="btn paid" disabled>Paid Test</button>
+        </div>
+        <div class="test-option">
+            <h3>Free Test</h3>
+            <ul>
+                <li>Instant result and certificate.</li>
+                <li>Mostly MCQs.</li>
+                <li>You can take the test anytime.</li>
+            </ul>
+            <button class="btn free" onclick="startFreeTest()">Start Free Test</button>
+        </div>
+        <button class="btn compare" onclick="compareCertificates()">Compare Certificates</button>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>
