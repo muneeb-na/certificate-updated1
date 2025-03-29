@@ -462,7 +462,11 @@ testButtons.forEach((button, index) => {
     });
 });
 
-
+testButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+        window.location.href = "select-test.html"; // Redirect to the test page
+    });
+});
 
 </script>
 </html>
